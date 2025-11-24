@@ -1,0 +1,25 @@
+{
+  "name": "absa_github_copilot_ide",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {},
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/tredgate/absa_github_copilot_ide.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/tredgate/absa_github_copilot_ide/issues"
+  },
+  "homepage": "https://github.com/tredgate/absa_github_copilot_ide#readme",
+  "devDependencies": {
+    "@playwright/test": "^1.56.1",
+    "@types/node": "^24.10.1"
+  },
+  "dependencies": {
+    "tsx": "^4.20.6"
+  }
+}
