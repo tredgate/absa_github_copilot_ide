@@ -31,7 +31,7 @@ const rawTransactions = [
 */
 export function categorizeMerchants(
   transactions: RawTransaction[]
-): CategorizedTransaction[] {
+): RawTransaction[] {
   const mccCategories: { [key: number]: string } = {
     5411: "Grocery Stores, Supermarkets",
     5812: "Eating Places, Restaurants",
