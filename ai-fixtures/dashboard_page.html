@@ -1,0 +1,1471 @@
+<html lang="en" dir="ltr" class="no-js">
+  <!--<!
+  [endif]--><!-- BEGIN HEAD --><head>
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+    <title>TPM | Dashboard</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta
+      content="width=device-width, initial-scale=1, user-scalable=no"
+      name="viewport"
+    />
+    <meta content="" name="description" />
+    <meta content="www.rukovoditel.net" name="author" />
+    <meta name="MobileOptimized" content="320" />
+
+    <!-- BEGIN GLOBAL MANDATORY STYLES -->
+    <link
+      href="template/plugins/font-awesome/css/font-awesome.min.css?v=4.7.0"
+      rel="stylesheet"
+      type="text/css"
+    />
+    <link
+      href="template/plugins/line-awesome/css/line-awesome.min.css?v=1.3.0"
+      rel="stylesheet"
+      type="text/css"
+    />
+    <link
+      href="template/plugins/bootstrap/css/bootstrap.min.css"
+      rel="stylesheet"
+      type="text/css"
+    />
+    <link
+      href="template/plugins/uniform/css/uniform.default.css"
+      rel="stylesheet"
+      type="text/css"
+    />
+    <!-- END GLOBAL MANDATORY STYLES -->
+    <!-- BEGIN PAGE LEVEL STYLES -->
+    <link
+      href="template/plugins/jquery-ui/jquery-ui-1.10.3.custom.min.css"
+      rel="stylesheet"
+    />
+    <link
+      href="template/plugins/bootstrap-modal/css/bootstrap-modal-bs3patch.css"
+      rel="stylesheet"
+      type="text/css"
+    />
+    <link
+      href="template/plugins/bootstrap-modal/css/bootstrap-modal.css"
+      rel="stylesheet"
+      type="text/css"
+    />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="template/plugins/bootstrap-datepicker/css/datepicker.css"
+    />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="template/plugins/bootstrap-datetimepicker-master/css/bootstrap-datetimepicker.css"
+    />
+    <!-- END PAGE LEVEL SCRIPTS -->
+    <!-- BEGIN THEME STYLES -->
+    <link
+      href="template/css/style-conquer.css?v=2"
+      rel="stylesheet"
+      type="text/css"
+    />
+    <link
+      href="template/css/style.css?v=3.3.1"
+      rel="stylesheet"
+      type="text/css"
+    />
+    <link
+      href="template/css/style-responsive.css?v=3.3.1"
+      rel="stylesheet"
+      type="text/css"
+    />
+    <link
+      href="template/css/plugins.css?v=3.3.1"
+      rel="stylesheet"
+      type="text/css"
+    />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="js/izoColorPicker/1.0/izoColorPicker.css"
+    />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="js/izoAutocomplete/1.0/izoAutocomplete.css"
+    />
+    <link
+      href="js/uploadifive/uploadifive.css"
+      rel="stylesheet"
+      media="screen"
+    />
+    <link href="js/chosen/chosen.css" rel="stylesheet" media="screen" />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="template/plugins/jquery-nestable/jquery.nestable.css"
+    />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      media="screen"
+      href="template/plugins/ckeditor/4.16.2/plugins/codesnippet/lib/highlight/styles/default.css"
+    />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="js/DataTables-1.10.15/media/css/dataTables.bootstrap.css"
+    />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="js/select2/dist/css/select2.min.css"
+    />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="js/multistep-indicator-master/css/style.css"
+    />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="js/JalaliCalendar/jquery.Bootstrap-PersianDateTimePicker.css"
+    />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="js/treetable-master/jquery-treetable.css"
+    />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="js/xdsoft_datetimepicker/2.5.21/jquery.datetimepicker.css"
+    />
+
+    <link rel="stylesheet" href="js/mapbbcode-master/dist/lib/leaflet.css" />
+    <link
+      rel="stylesheet"
+      href="js/mapbbcode-master/dist/lib/leaflet.draw.css"
+    />
+    <link
+      href="css/skins/tredgate/tredgate.css?v=3.3.1"
+      rel="stylesheet"
+      type="text/css"
+    />
+
+    <script
+      src="template/plugins/jquery-1.10.2.min.js"
+      type="text/javascript"
+    ></script>
+
+    <script
+      type="text/javascript"
+      src="js/validation/jquery.validate.min.js"
+    ></script>
+    <script
+      type="text/javascript"
+      src="js/validation/additional-methods.min.js"
+    ></script>
+    <script type="text/javascript">
+      $.extend($.validator.messages, {
+        required: "This field is required!",
+        number: "Please enter a valid number.",
+        extension: "This file type is not allowed.",
+        email: "Please enter a valid email address.",
+        digits: "Please enter an integer.",
+        url: "Please enter a valid URL.",
+        min: "Please enter a value greater than or equal to {0}.",
+        max: "Please enter a value less than or equal to {0}.",
+      });
+
+      jQuery.validator.addMethod(
+        "email",
+        function (value, element) {
+          return (
+            this.optional(element) ||
+            /^[a-zA-Zа-яА-Я0-9.!#$%&'*+\/=?^_`{|}~-]+@[a-zA-Zа-яА-Я0-9](?:[a-zA-Zа-яА-Я0-9-]{0,61}[a-zA-Zа-яА-Я0-9])?(?:\.[a-zA-Zа-яА-Я0-9](?:[a-zA-Zа-яА-Я0-9-]{0,61}[a-zA-Zа-яА-Я0-9])?)*$/.test(
+              value
+            )
+          );
+        },
+        "Please enter a valid email address."
+      );
+
+      jQuery.validator.addMethod("accept", function () {
+        return true;
+      });
+    </script>
+
+    <!-- Add fancyBox -->
+    <link
+      rel="stylesheet"
+      href="js/fancybox/source/jquery.fancybox.css?v=2.1.5"
+      type="text/css"
+      media="screen"
+    />
+    <script
+      type="text/javascript"
+      src="js/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"
+    ></script>
+
+    <script
+      type="text/javascript"
+      src="js/izoColorPicker/1.0/izoColorPicker.js"
+    ></script>
+
+    <script type="text/javascript" src="js/main.js?v=3.3.1"></script>
+
+    <script type="text/javascript">
+      var CKEDITOR = false;
+      var CKEDITOR_holders = new Array();
+
+      var app_key_ctrl_pressed = false;
+      $(window)
+        .keydown(function (evt) {
+          if (evt.which == 17) {
+            app_key_ctrl_pressed = true;
+          }
+        })
+        .keyup(function (evt) {
+          if (evt.which == 17) {
+            app_key_ctrl_pressed = false;
+          }
+        });
+
+      function keep_session() {
+        $.ajax({
+          url: "https://tredgate.com/pmtool/index.php?module=dashboard/&action=keep_session&token=IFEyWMbUBU",
+        });
+      }
+
+      $(function () {
+        setInterval("keep_session()", 600000);
+      });
+
+      var app_cfg_first_day_of_week = 1;
+      var app_language_short_code = "en";
+      var app_cfg_ckeditor_images =
+        "https://tredgate.com/pmtool/index.php?module=dashboard/ckeditor_image";
+      var app_language_text_direction = "ltr";
+      var app_user_saved_colors = "";
+      var app_cfg_drop_down_menu_on_hover = 0;
+    </script>
+
+    <link rel="stylesheet" type="text/css" href="css/default.css?v=3.3.1" />
+
+    <!-- END THEME STYLES -->
+    <link
+      type="image/png"
+      rel="icon"
+      href="uploads/app_favicon_1677539768.png"
+    />
+    <!-- Custom code at the end of </head> tag -->
+
+    <style>
+      .cke {
+        visibility: hidden;
+      }
+    </style>
+    <style type="text/css">
+      .fancybox-margin {
+        margin-right: 10px;
+      }
+    </style>
+  </head>
+  <!-- BEGIN BODY -->
+  <body class="page-header-fixed page-user-944 page-usergroup-6" style="">
+    <!-- BEGIN HEADER -->
+    <div class="header navbar navbar-inverse navbar-fixed-top noprint">
+      <!-- BEGIN TOP NAVIGATION BAR -->
+      <div class="header-inner">
+        <!-- BEGIN LOGO -->
+        <a
+          class="navbar-brand"
+          href="https://tredgate.com/pmtool/index.php?module=dashboard/"
+        >
+          TEG Project Management
+        </a>
+        <!-- END LOGO -->
+
+        <!-- BEGIN RESPONSIVE MENU TOGGLER -->
+        <a
+          href="javascript:;"
+          class="navbar-toggle collapsed"
+          data-toggle="collapse"
+          data-target=".main-navbar-collapse"
+          aria-expanded="false"
+        >
+          <img src="template/img/menu-toggler.png" alt="" />
+        </a>
+        <!-- END RESPONSIVE MENU TOGGLER -->
+        <!-- BEGIN TOP NAVIGATION MENU -->
+        <ul class="nav navbar-nav pull-right">
+          <li class="dropdown hot-reports" id="favorites_header_dropdown"></li>
+
+          <script>
+            function favorites_render_dropdown() {
+              $("#favorites_header_dropdown").load(
+                "https://tredgate.com/pmtool/index.php?module=dashboard/&action=update_favorites_header_dropdown&token=IFEyWMbUBU",
+                function () {
+                  $('[data-hover="dropdown"]').dropdownHover();
+                  app_handle_scrollers();
+                }
+              );
+            }
+
+            $(function () {
+              favorites_render_dropdown();
+            });
+          </script>
+
+          <li class="dropdown hot-reports" id="user_notifications_report">
+            <a
+              href="#"
+              class="dropdown-toggle"
+              data-toggle="dropdown"
+              data-hover="dropdown"
+              data-close-others="true"
+            >
+              <i class="fa fa-bell-o"></i>
+            </a>
+            <ul class="dropdown-menu extended tasks">
+              <li
+                style="cursor: pointer"
+                onclick="location.href='https://tredgate.com/pmtool/index.php?module=users/notifications'"
+              >
+                <p>My Notifications</p>
+              </li>
+              <li>
+                <div
+                  class="slimScrollDiv"
+                  style="
+                    position: relative;
+                    overflow: hidden;
+                    width: auto;
+                    height: 42px;
+                  "
+                >
+                  <ul
+                    class="dropdown-menu-list scroller"
+                    style="height: 42px; overflow: hidden; width: auto"
+                  >
+                    <li>
+                      <a onclick="return false;">No Records Found</a>
+                    </li>
+                  </ul>
+                  <div
+                    class="slimScrollBar"
+                    style="
+                      background: rgb(161, 178, 189);
+                      width: 7px;
+                      position: absolute;
+                      top: 0px;
+                      opacity: 0.4;
+                      display: block;
+                      border-radius: 7px;
+                      z-index: 99;
+                      right: 1px;
+                    "
+                  ></div>
+                  <div
+                    class="slimScrollRail"
+                    style="
+                      width: 7px;
+                      height: 100%;
+                      position: absolute;
+                      top: 0px;
+                      display: none;
+                      border-radius: 7px;
+                      background: rgb(51, 51, 51);
+                      opacity: 0.2;
+                      z-index: 90;
+                      right: 1px;
+                    "
+                  ></div>
+                </div>
+              </li>
+            </ul>
+          </li>
+
+          <script>
+            function user_notifications_report_render_dropdown() {
+              $("#user_notifications_report").load(
+                "https://tredgate.com/pmtool/index.php?module=dashboard/&action=update_user_notifications_report&token=IFEyWMbUBU",
+                function () {
+                  $('[data-hover="dropdown"]').dropdownHover();
+                  app_handle_scrollers();
+                }
+              );
+            }
+
+            $(function () {
+              setInterval(function () {
+                user_notifications_report_render_dropdown();
+              }, 60000);
+
+              user_notifications_report_render_dropdown();
+            });
+          </script>
+
+          <!-- BEGIN USER LOGIN DROPDOWN -->
+          <li class="dropdown user" id="user_dropdown">
+            <a
+              href="#"
+              class="dropdown-toggle"
+              data-toggle="dropdown"
+              data-hover="dropdown"
+              data-close-others="true"
+            >
+              <img
+                src="images/no_photo.png"
+                border="0"
+                class="user-photo-header"
+              />
+              <span class="username"> Absa Training </span>
+
+              <i class="fa fa-angle-down"></i>
+            </a>
+
+            <ul class="dropdown-menu">
+              <li>
+                <a
+                  href="https://tredgate.com/pmtool/index.php?module=users/account"
+                  ><i class="fa fa-user"></i> My Account</a
+                >
+              </li>
+
+              <li>
+                <a
+                  onclick="open_dialog('https://tredgate.com/pmtool/index.php?module=dashboard/configure')"
+                  class="cursor-pointer"
+                  ><i class="fa fa-bars"></i> Configure Dashboard</a
+                >
+              </li>
+
+              <li>
+                <a
+                  onclick="open_dialog('https://tredgate.com/pmtool/index.php?module=dashboard/configure_theme')"
+                  class="cursor-pointer"
+                  ><i class="fa fa-gear"></i> Configure Theme</a
+                >
+              </li>
+
+              <li>
+                <a
+                  href="https://tredgate.com/pmtool/index.php?module=users/change_password"
+                  ><i class="fa fa-unlock-alt"></i> Change Password</a
+                >
+              </li>
+              <li class="divider"></li>
+              <li id="logout">
+                <a
+                  href="https://tredgate.com/pmtool/index.php?module=users/login&amp;action=logoff&amp;token=IFEyWMbUBU"
+                  ><i class="fa fa-sign-out"></i> Logoff</a
+                >
+              </li>
+            </ul>
+          </li>
+          <!-- END USER LOGIN DROPDOWN -->
+        </ul>
+        <!-- END TOP NAVIGATION MENU -->
+      </div>
+      <!-- END TOP NAVIGATION BAR -->
+    </div>
+
+    <script>
+      function set_user_cfg(key, value) {
+        switch (key) {
+          case "sidebar-option":
+            if (value == "fixed") value = "page-sidebar-fixed";
+            else value = "";
+            break;
+          case "sidebar-pos-option":
+            if (value == "right") value = "page-sidebar-reversed";
+            else value = "";
+            break;
+          case "page-scale-option":
+            if (value == "reduced") value = "page-scale-reduced";
+            else value = "";
+            break;
+        }
+
+        $.ajax({
+          method: "POST",
+          url: "https://tredgate.com/pmtool/index.php?module=users/account&action=set_cfg&token=IFEyWMbUBU",
+          data: { key: key, value: value },
+        });
+      }
+    </script>
+    <!-- END HEADER -->
+
+    <div class="clearfix"></div>
+
+    <!-- BEGIN CONTAINER -->
+    <div class="page-container">
+      <!-- BEGIN SIDEBAR -->
+      <div class="page-sidebar-wrapper noprint">
+        <div class="page-sidebar-wrapper">
+          <div class="page-sidebar main-navbar-collapse collapse">
+            <!-- BEGIN SIDEBAR MENU -->
+            <ul class="page-sidebar-menu">
+              <li class="sidebar-toggler-wrapper">
+                <!-- BEGIN SIDEBAR TOGGLER BUTTON -->
+                <div class="sidebar-toggler"></div>
+                <!-- BEGIN SIDEBAR TOGGLER BUTTON -->
+
+                <div class="logo">
+                  <a
+                    href="https://tredgate.com/pmtool/index.php?module=dashboard/"
+                    ><img
+                      src="uploads/app_logo_1677539663.png"
+                      border="0"
+                      title="TEG Project Management"
+                  /></a>
+                </div>
+
+                <div class="clearfix"></div>
+              </li>
+              <li></li>
+
+              <li class="start" id="dashboard">
+                <a
+                  class="menu-dashboarddashboard"
+                  href="https://tredgate.com/pmtool/index.php?module=dashboard/dashboard"
+                  ><i class="fa fa-home" aria-hidden="true"></i>
+                  <span class="title level-0">Dashboard</span></a
+                >
+              </li>
+              <li id="Projects">
+                <a
+                  class="menu-itemsitems21"
+                  href="https://tredgate.com/pmtool/index.php?module=items/items&amp;path=21"
+                  ><i class="fa fa-reorder" aria-hidden="true"></i>
+                  <span class="title level-0"> Projects</span></a
+                >
+              </li>
+              <li id="Reports">
+                <a
+                  class="menu-reportsreports"
+                  href="https://tredgate.com/pmtool/index.php?module=reports/reports"
+                  ><i class="fa fa-bar-chart-o" aria-hidden="true"></i>
+                  <span class="title submenu submenu-level-0 width-icon"
+                    >Reports</span
+                  ><span class="arrow"></span
+                ></a>
+                <ul class="sub-menu">
+                  <li id="Standard Reports">
+                    <a
+                      class="menu-reportsreports"
+                      href="https://tredgate.com/pmtool/index.php?module=reports/reports"
+                      ><span class="title level-1">Standard Reports</span></a
+                    >
+                  </li>
+                  <li id="Reports groups">
+                    <a
+                      class="menu-reports_groupsreports"
+                      href="https://tredgate.com/pmtool/index.php?module=reports_groups/reports"
+                      ><span class="title level-1">Reports groups</span></a
+                    >
+                  </li>
+                </ul>
+              </li>
+            </ul>
+            <!-- END SIDEBAR MENU -->
+          </div>
+        </div>
+      </div>
+
+      <!-- END SIDEBAR -->
+
+      <!-- BEGIN CONTENT -->
+      <div class="page-content-wrapper">
+        <div class="page-content-wrapper">
+          <div class="page-content">
+            <div
+              id="ajax-modal"
+              class="modal fade"
+              tabindex="-1"
+              data-replace="true"
+              data-keyboard="false"
+              data-backdrop="static"
+              data-focus-on=".autofocus"
+            ></div>
+            <!-- BEGIN PAGE CONTENT-->
+            <div class="row">
+              <div class="col-md-12">
+                <script>
+                  $(function () {
+                    $(".users-alers-close").click(function () {
+                      id = $(this).attr("data-id");
+                      $.ajax({
+                        method: "POST",
+                        url: "https://tredgate.com/pmtool/index.php?module=dashboard/&action=set_users_alers_viewed&token=IFEyWMbUBU",
+                        data: { id: id },
+                      });
+                    });
+                  });
+                </script>
+                <h3 class="page-title" id="welcome-page-header">
+                  Vítej v testovací aplikaci Tredgate Project
+                </h3>
+                <p>
+                  Tato aplikace slouží pro trénink Software Testování a
+                  Automatizace testování
+                </p>
+                <p>
+                  Pokud budeš mít jakékoliv problémy, kontakuj Petra na:
+                  petr.fifka@tredgate.cz
+                </p>
+                <script>
+                  function load_items_listing(listing_container, page) {
+                    //parse listing id
+                    listing_data = listing_container
+                      .replace("entity_items_listing", "")
+                      .split("_");
+
+                    //set default redirect
+                    redirect_to = "report_" + listing_data[0];
+
+                    //set default path
+                    path = listing_data[1];
+
+                    //replace default path by current path
+                    if ($("#entity_items_listing_path").length) {
+                      path = $("#entity_items_listing_path").val();
+                      redirect_to = "";
+                    }
+
+                    //replace default path by subentity path in info page
+                    if (
+                      $("#subentity" + parseInt(path) + "_items_listing_path")
+                        .length
+                    ) {
+                      path = $(
+                        "#subentity" + path + "_items_listing_path"
+                      ).val();
+                      redirect_to = "parent_item_info_page";
+                    }
+
+                    //force custom redirect
+                    if ($("#" + listing_container + "_redirect_to").length) {
+                      redirect_to = $(
+                        "#" + listing_container + "_redirect_to"
+                      ).val();
+                    }
+
+                    //set redirect to dashboard if it's dashboard page
+                    if ($("#dashboard-reports-container").length) {
+                      redirect_to = "dashboard";
+                    }
+
+                    if ($("#dashboard-reports-group-container").length) {
+                      redirect_to =
+                        "reports_groups" +
+                        $("#dashboard-reports-group-container").attr("data_id");
+                    }
+
+                    $("#" + listing_container).append(
+                      '<div class="data_listing_processing"></div>'
+                    );
+
+                    $("#" + listing_container).css("opacity", 0.5);
+
+                    //prepare search fields id
+                    var use_search_fields = [];
+                    $.each(
+                      $("." + listing_container + "_use_search_fields:checked"),
+                      function () {
+                        use_search_fields.push($(this).val());
+                      }
+                    );
+
+                    $("#" + listing_container).load(
+                      "https://tredgate.com/pmtool/index.php?module=items/listing",
+                      {
+                        redirect_to: redirect_to,
+                        path: path,
+                        reports_entities_id: listing_data[1],
+                        reports_id: listing_data[0],
+                        listing_container: listing_container,
+                        page: page,
+                        search_keywords: $(
+                          "#" + listing_container + "_search_keywords"
+                        ).val(),
+                        use_search_fields: use_search_fields.join(","),
+                        search_in_comments: $(
+                          "#" + listing_container + "_search_in_comments"
+                        ).prop("checked"),
+                        search_in_all: $(
+                          "#" + listing_container + "_search_in_all"
+                        ).prop("checked"),
+                        search_type_and: $(
+                          "#" + listing_container + "_search_type_and"
+                        ).prop("checked"),
+                        search_type_match: $(
+                          "#" + listing_container + "_search_type_match"
+                        ).prop("checked"),
+                        search_reset: $(
+                          "#" + listing_container + "_search_reset"
+                        ).val(),
+                        listing_order_fields: $(
+                          "#" + listing_container + "_order_fields"
+                        ).val(),
+                        listing_order_fields_changed: $(
+                          "#" + listing_container + "_order_fields"
+                        ).attr("is_changed"),
+                        has_with_selected: $(
+                          "#" + listing_container + "_has_with_selected"
+                        ).val(),
+                        force_display_id: $(
+                          "#" + listing_container + "_force_display_id"
+                        ).val(),
+                        force_popoup_fields: $(
+                          "#" + listing_container + "_force_popoup_fields"
+                        ).val(),
+                        force_filter_by: $(
+                          "#" + listing_container + "_force_filter_by"
+                        ).val(),
+                      },
+                      function (response, status, xhr) {
+                        if (status == "error") {
+                          $(this).html(
+                            '<div class="alert alert-error"><b>Error:</b> ' +
+                              xhr.status +
+                              " " +
+                              xhr.statusText +
+                              "<div>" +
+                              response +
+                              "</div></div>"
+                          );
+                        }
+
+                        $("#" + listing_container).css("opacity", 1);
+
+                        appHandleUniformInListing();
+
+                        //prevent double click on button
+                        $(".prevent-double-click").click(function () {
+                          $(this).attr("disabled", "disabled");
+                        });
+
+                        handle_itmes_select(listing_container);
+
+                        app_handle_listing_horisontal_scroll($(this));
+
+                        app_handle_listing_fixed_table_header(
+                          $(this),
+                          "dashboard/dashboard"
+                        );
+
+                        //editable cell
+                        $("#" + listing_container + " .editable-cell").click(
+                          function (e) {
+                            if (
+                              e.target.tagName.toLowerCase() != "a" &&
+                              e.target.tagName.toLowerCase() != "sup"
+                            ) {
+                              $(this)
+                                .closest("tr")
+                                .addClass("editable-cell-row-selected");
+
+                              open_dialog(
+                                "https://tredgate.com/pmtool/index.php?module=items/form_single_field&path=" +
+                                  $(this).attr("data_path") +
+                                  "&field_id=" +
+                                  $(this).attr("data_field_id") +
+                                  "&report_id=" +
+                                  $(this).attr("data_report_id") +
+                                  "&page=" +
+                                  $(this).attr("data_page")
+                              );
+
+                              let that = $(this);
+
+                              $("#ajax-modal").on(
+                                "hidden.bs.modal",
+                                function () {
+                                  that
+                                    .closest("tr")
+                                    .removeClass("editable-cell-row-selected");
+                                }
+                              );
+                            }
+                          }
+                        );
+
+                        //select row
+                        $("#" + listing_container + " .items_checkbox").each(
+                          function () {
+                            if ($(this).attr("checked") == "checked") {
+                              $(this).closest("tr").addClass("row-selected");
+                            }
+                          }
+                        );
+                      }
+                    );
+                  }
+
+                  function handle_itmes_select_all(listing_container) {
+                    $("#" + listing_container + " .select_all_items").click();
+                  }
+
+                  function handle_itmes_select_currnt_page(listing_container) {
+                    $(
+                      "#" +
+                        listing_container +
+                        " .select_all_items_current_page"
+                    ).click();
+                  }
+
+                  function handle_itmes_select_reset(listing_container) {
+                    $("#" + listing_container + " .select_all_items").attr(
+                      "checked",
+                      true
+                    );
+                    $(
+                      "#" +
+                        listing_container +
+                        " .select_all_items_current_page"
+                    ).attr("checked", false);
+                    $("#" + listing_container + " .select_all_items").click();
+                  }
+
+                  function handle_itmes_select(listing_container) {
+                    //select on current page
+                    $(
+                      "#" +
+                        listing_container +
+                        " .select_all_items_current_page"
+                    ).click(function () {
+                      listing_data = listing_container
+                        .replace("entity_items_listing", "")
+                        .split("_");
+
+                      reports_id = listing_data[0];
+
+                      if ($(this).attr("checked") == "checked") {
+                        items = [];
+                        $("#" + listing_container + " .items_checkbox").each(
+                          function () {
+                            if ($(this).attr("checked") != "checked") {
+                              $(this).attr("checked", true);
+                              $(
+                                "#" +
+                                  listing_container +
+                                  " #uniform-items_" +
+                                  $(this).val() +
+                                  " span"
+                              ).addClass("checked");
+                              $(this).closest("tr").addClass("row-selected");
+                              items.push($(this).val());
+                            }
+                          }
+                        );
+
+                        $.ajax({
+                          type: "POST",
+                          url: "https://tredgate.com/pmtool/index.php?module=items/select_items&action=select_on_page&token=IFEyWMbUBU",
+                          data: {
+                            items: items,
+                            reports_id: reports_id,
+                            path: listing_data[1],
+                          },
+                        });
+                      } else {
+                        items = [];
+                        $("#" + listing_container + " .items_checkbox").each(
+                          function () {
+                            $(this).attr("checked", false);
+                            $(
+                              "#" +
+                                listing_container +
+                                " #uniform-items_" +
+                                $(this).val() +
+                                " span"
+                            ).removeClass("checked");
+                            $(this).closest("tr").removeClass("row-selected");
+                            items.push($(this).val());
+                          }
+                        );
+
+                        $.ajax({
+                          type: "POST",
+                          url: "https://tredgate.com/pmtool/index.php?module=items/select_items&action=deselect_on_page&token=IFEyWMbUBU",
+                          data: {
+                            items: items,
+                            reports_id: reports_id,
+                            path: listing_data[1],
+                          },
+                        });
+                      }
+                    });
+
+                    //select single item
+                    $("#" + listing_container + " .items_checkbox").click(
+                      function () {
+                        listing_data = listing_container
+                          .replace("entity_items_listing", "")
+                          .split("_");
+
+                        //set default path
+                        path = listing_data[1];
+
+                        if ($("#entity_items_listing_path").length) {
+                          listing_data[1] = $(
+                            "#entity_items_listing_path"
+                          ).val();
+                        }
+
+                        reports_id = listing_data[0];
+
+                        if (
+                          $("#" + listing_container + "_use_reports_id").length
+                        ) {
+                          reports_id = $(
+                            "#" + listing_container + "_use_reports_id"
+                          ).val();
+                        }
+
+                        //select row
+                        if ($(this).attr("checked") == "checked") {
+                          $(this).closest("tr").addClass("row-selected");
+                        } else {
+                          $(this).closest("tr").removeClass("row-selected");
+                        }
+
+                        $.ajax({
+                          type: "POST",
+                          url: "https://tredgate.com/pmtool/index.php?module=items/select_items&action=select&token=IFEyWMbUBU",
+                          data: {
+                            id: $(this).val(),
+                            checked: $(this).attr("checked"),
+                            reports_id: reports_id,
+                            path: listing_data[1],
+                          },
+                        });
+                      }
+                    );
+
+                    //force select all itesm if listing type is not table
+                    $(
+                      "." + listing_container + "_select_all_items_force"
+                    ).click(function () {
+                      data_conteiner = $(this).attr("data-container-id");
+                      $("#" + data_conteiner + " .select_all_items").trigger(
+                        "click"
+                      );
+                      $(this).before('<div class="ajax-loading-small"></div>');
+                    });
+
+                    //select all items
+                    $("#" + listing_container + " .select_all_items").click(
+                      function () {
+                        listing_data = listing_container
+                          .replace("entity_items_listing", "")
+                          .split("_");
+
+                        //set default path
+                        path = listing_data[1];
+
+                        if ($("#entity_items_listing_path").length) {
+                          path = $("#entity_items_listing_path").val();
+                        }
+
+                        //replace default path by subentity path in info page
+                        if (
+                          $(
+                            "#subentity" +
+                              parseInt(path) +
+                              "_items_listing_path"
+                          ).length
+                        ) {
+                          path = $(
+                            "#subentity" + path + "_items_listing_path"
+                          ).val();
+                        }
+
+                        //prepare search fields id
+                        var use_search_fields = [];
+                        $.each(
+                          $(
+                            "." +
+                              listing_container +
+                              "_use_search_fields:checked"
+                          ),
+                          function () {
+                            use_search_fields.push($(this).val());
+                          }
+                        );
+
+                        //add loading
+                        $(this).before(
+                          '<div class="ajax-loading-small"></div>'
+                        );
+
+                        var obj = $(this);
+
+                        use_reports_id = 0;
+                        if (
+                          $("#" + listing_container + "_use_reports_id").length
+                        ) {
+                          use_reports_id = $(
+                            "#" + listing_container + "_use_reports_id"
+                          ).val();
+                        }
+                        //alert(use_reports_id)
+
+                        $.ajax({
+                          type: "POST",
+                          url: "https://tredgate.com/pmtool/index.php?module=items/select_items&action=select_all&token=IFEyWMbUBU",
+                          data: {
+                            id: $(this).val(),
+                            checked: $(this).attr("checked"),
+                            reports_id: $(this).val(),
+                            use_reports_id: use_reports_id,
+                            path: path,
+                            is_tree_view: $(this).attr("is_tree_view"),
+                            search_keywords: $(
+                              "#" + listing_container + "_search_keywords"
+                            ).val(),
+                            use_search_fields: use_search_fields.join(","),
+                            search_in_comments: $(
+                              "#" + listing_container + "_search_in_comments"
+                            ).prop("checked"),
+                            search_in_all: $(
+                              "#" + listing_container + "_search_in_all"
+                            ).prop("checked"),
+                            search_type_and: $(
+                              "#" + listing_container + "_search_type_and"
+                            ).prop("checked"),
+                            search_type_match: $(
+                              "#" + listing_container + "_search_type_match"
+                            ).prop("checked"),
+                            listing_order_fields: $(
+                              "#" + listing_container + "_order_fields"
+                            ).val(),
+                            force_display_id: $(
+                              "#" + listing_container + "_force_display_id"
+                            ).val(),
+                            force_filter_by: $(
+                              "#" + listing_container + "_force_filter_by"
+                            ).val(),
+                          },
+                        }).done(function () {
+                          $(".ajax-loading-small").remove();
+
+                          if (obj.attr("checked")) {
+                            $(
+                              "#" + listing_container + " .items_checkbox"
+                            ).each(function () {
+                              $(this).attr("checked", true);
+                              $(
+                                "#" +
+                                  listing_container +
+                                  " #uniform-items_" +
+                                  $(this).val() +
+                                  " span"
+                              ).addClass("checked");
+
+                              $(this).closest("tr").addClass("row-selected");
+                            });
+                          } else {
+                            $(
+                              "#" + listing_container + " .items_checkbox"
+                            ).each(function () {
+                              $(this).attr("checked", false);
+                              $(
+                                "#" +
+                                  listing_container +
+                                  " #uniform-items_" +
+                                  $(this).val() +
+                                  " span"
+                              ).removeClass("checked");
+
+                              $(this).closest("tr").removeClass("row-selected");
+                            });
+                          }
+                        });
+                      }
+                    );
+                  }
+                </script>
+              </div>
+            </div>
+            <!-- END PAGE CONTENT-->
+          </div>
+        </div>
+      </div>
+      <!-- END CONTENT -->
+    </div>
+    <!-- END CONTAINER -->
+
+    <!-- BEGIN FOOTER -->
+    <div class="footer noprint">
+      <div class="footer-inner">
+        <small
+          >Powered by&nbsp;<a
+            rel="nofollow"
+            target="_blank"
+            href="https://www.rukovoditel.net"
+            title="Universal Project Management Software"
+            >Rukovoditel</a
+          ></small
+        >
+      </div>
+      <div class="footer-tools"></div>
+    </div>
+    <!-- END FOOTER -->
+
+    <!-- BEGIN JAVASCRIPTS(Load javascripts at bottom, this will reduce page load time) -->
+    <!-- BEGIN CORE PLUGINS -->
+    <!--[if lt IE 9]>
+      <script src="template/plugins/respond.min.js"></script>
+      <script src="template/plugins/excanvas.min.js"></script>
+    <![endif]-->
+    <script
+      src="template/plugins/jquery-migrate-1.2.1.min.js"
+      type="text/javascript"
+    ></script>
+    <!-- IMPORTANT! Load jquery-ui-1.10.3.custom.min.js before bootstrap.min.js to fix bootstrap tooltip conflict with jquery ui tooltip -->
+    <script
+      src="template/plugins/jquery-ui/jquery-ui-1.10.3.custom.min.js"
+      type="text/javascript"
+    ></script>
+    <script
+      src="js/jquery.ui.touch-punch/jquery.ui.touch-punch.min.js"
+      type="text/javascript"
+    ></script>
+    <script
+      src="template/plugins/bootstrap/js/bootstrap.min.js"
+      type="text/javascript"
+    ></script>
+    <script
+      src="template/plugins/bootstrap-hover-dropdown/bootstrap-hover-dropdown.js?v=2.2.2"
+      type="text/javascript"
+    ></script>
+    <script
+      src="template/plugins/jquery-slimscroll/jquery.slimscroll.min.js"
+      type="text/javascript"
+    ></script>
+    <script
+      src="template/plugins/jquery.blockui.min.js"
+      type="text/javascript"
+    ></script>
+    <script
+      src="template/plugins/jquery.cokie.min.js"
+      type="text/javascript"
+    ></script>
+    <script
+      src="template/plugins/uniform/jquery.uniform.min.js"
+      type="text/javascript"
+    ></script>
+    <!-- END CORE PLUGINS -->
+    <!-- BEGIN PAGE LEVEL PLUGINS -->
+    <script
+      type="text/javascript"
+      src="template/plugins/ckeditor/4.16.2/ckeditor.js"
+    ></script>
+    <script
+      type="text/javascript"
+      src="template/plugins/bootstrap-datepicker/js/bootstrap-datepicker.js"
+    ></script>
+    <script
+      type="text/javascript"
+      src="template/plugins/bootstrap-datetimepicker-master/js/bootstrap-datetimepicker.js"
+    ></script>
+    <script
+      type="text/javascript"
+      src="template/plugins/bootstrap-modal/js/bootstrap-modalmanager.js"
+    ></script>
+    <script
+      type="text/javascript"
+      src="template/plugins/bootstrap-modal/js/bootstrap-modal.js"
+    ></script>
+    <script
+      type="text/javascript"
+      src="template/plugins/jquery-nestable/jquery.nestable.js"
+    ></script>
+    <script
+      type="text/javascript"
+      src="template/plugins/bootstrap-wizard/jquery.bootstrap.wizard.js"
+    ></script>
+    <script
+      type="text/javascript"
+      src="js/izoAutocomplete/1.0/izoAutocomplete.js"
+    ></script>
+    <script
+      type="text/javascript"
+      src="js/uploadifive/jquery.uploadifive.js?v=1.2.2"
+    ></script>
+    <script type="text/javascript" src="js/chosen/chosen.jquery.js"></script>
+    <script
+      type="text/javascript"
+      src="js/chosen/jquery-chosen-sortable.min.js"
+    ></script>
+    <script
+      type="text/javascript"
+      src="js/chosen/chosen-order/chosen.order.jquery.min.js"
+    ></script>
+    <script
+      type="text/javascript"
+      src="js/maskedinput/jquery.maskedinput.js"
+    ></script>
+    <script type="text/javascript" src="js/totop/jquery.ui.totop.js"></script>
+    <script
+      type="text/javascript"
+      src="js/jquery-number-master/jquery.number.min.js"
+    ></script>
+    <script
+      type="text/javascript"
+      src="template/plugins/ckeditor/4.16.2/plugins/codesnippet/lib/highlight/highlight.pack.js"
+    ></script>
+    <script
+      type="text/javascript"
+      src="js/jquery-resizable/jquery-resizable.js"
+    ></script>
+    <script
+      type="text/javascript"
+      src="js/select2/dist/js/select2.full.js"
+    ></script>
+    <script
+      type="text/javascript"
+      src="js/jquery.taboverride-master/build/taboverride.min.js"
+    ></script>
+    <script
+      type="text/javascript"
+      src="js/jquery.taboverride-master/build/jquery.taboverride.min.js"
+    ></script>
+    <script type="text/javascript" src="js/JalaliCalendar/jalaali.js"></script>
+    <script
+      type="text/javascript"
+      src="js/JalaliCalendar/jquery.Bootstrap-PersianDateTimePicker.js"
+    ></script>
+    <script
+      type="text/javascript"
+      src="js/inputmask/5.0.5/jquery.inputmask.min.js"
+    ></script>
+    <script
+      type="text/javascript"
+      src="js/scannerdetection/1.1.2/jquery.scannerdetection.js"
+    ></script>
+    <script
+      type="text/javascript"
+      src="js/treetable-master/jquery-treetable.js"
+    ></script>
+    <script
+      type="text/javascript"
+      src="js/xdsoft_datetimepicker/2.5.21/jquery.datetimepicker.full.js"
+    ></script>
+    <script
+      type="text/javascript"
+      src="js/jquery.zeninput/jquery.zeninput.js"
+    ></script>
+
+    <!-- END PAGE LEVEL PLUGINS -->
+
+    <script src="js/mapbbcode-master/dist/lib/leaflet.js"></script>
+    <script src="js/mapbbcode-master/dist/lib/leaflet.draw.js"></script>
+
+    <script src="js/mapbbcode-master/src/MapBBCode.js"></script>
+    <script src="js/mapbbcode-master/src/MapBBCodeUI.js"></script>
+    <script src="js/mapbbcode-master/src/MapBBCodeUI.Editor.js"></script>
+    <script src="js/mapbbcode-master/src/images/EditorSprites.js"></script>
+    <script src="js/mapbbcode-master/src/controls/FunctionButton.js"></script>
+    <script src="js/mapbbcode-master/src/controls/LetterIcon.js"></script>
+    <script src="js/mapbbcode-master/src/controls/PopupIcon.js"></script>
+    <script src="js/mapbbcode-master/src/controls/Leaflet.Search.js"></script>
+    <script src="js/mapbbcode-master/src/handlers/Handler.Text.js"></script>
+    <script src="js/mapbbcode-master/src/handlers/Handler.Color.js"></script>
+    <script src="js/mapbbcode-master/src/handlers/Handler.Length.js"></script>
+
+    <script src="js/mapbbcode-master/dist/lang/en.js"></script>
+
+    <!-- BEGIN PAGE LEVEL SCRIPTS -->
+    <script src="template/scripts/app.js" type="text/javascript"></script>
+    <!-- END PAGE LEVEL SCRIPTS -->
+
+    <script>
+      var xdatetimepicker_i18n = {
+        months: [
+          "January",
+          "February",
+          "March",
+          "April",
+          "May",
+          "June",
+          "July",
+          "August",
+          "September",
+          "October",
+          "November",
+          "December",
+        ],
+        dayOfWeekShort: ["Su", "Mo", "Tu", "We", "Th", "Fr", "Sa", "Su"],
+        dayOfWeek: [
+          "Sunday",
+          "Monday",
+          "Tuesday",
+          "Wednesday",
+          "Thursday",
+          "Friday",
+          "Saturday",
+        ],
+      };
+
+      jQuery(document).ready(function () {
+        $.fn.datepicker.dates["en"] = {
+          days: [
+            "Sunday",
+            "Monday",
+            "Tuesday",
+            "Wednesday",
+            "Thursday",
+            "Friday",
+            "Saturday",
+          ],
+          daysShort: ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat", "Sun"],
+          daysMin: ["Su", "Mo", "Tu", "We", "Th", "Fr", "Sa", "Su"],
+          months: [
+            "January",
+            "February",
+            "March",
+            "April",
+            "May",
+            "June",
+            "July",
+            "August",
+            "September",
+            "October",
+            "November",
+            "December",
+          ],
+          monthsShort: [
+            "Jan",
+            "Feb",
+            "Mar",
+            "Apr",
+            "May",
+            "Jun",
+            "Jul",
+            "Aug",
+            "Sep",
+            "Oct",
+            "Nov",
+            "Dec",
+          ],
+          today: "Today",
+          clear: "Clear",
+        };
+
+        $.fn.datetimepicker.dates["en"] = {
+          days: [
+            "Sunday",
+            "Monday",
+            "Tuesday",
+            "Wednesday",
+            "Thursday",
+            "Friday",
+            "Saturday",
+          ],
+          daysShort: ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat", "Sun"],
+          daysMin: ["Su", "Mo", "Tu", "We", "Th", "Fr", "Sa", "Su"],
+          months: [
+            "January",
+            "February",
+            "March",
+            "April",
+            "May",
+            "June",
+            "July",
+            "August",
+            "September",
+            "October",
+            "November",
+            "December",
+          ],
+          monthsShort: [
+            "Jan",
+            "Feb",
+            "Mar",
+            "Apr",
+            "May",
+            "Jun",
+            "Jul",
+            "Aug",
+            "Sep",
+            "Oct",
+            "Nov",
+            "Dec",
+          ],
+          meridiem: ["am", "pm"],
+          suffix: ["st", "nd", "rd", "th"],
+          today: "Today",
+          clear: "Clear",
+        };
+
+        App.init();
+
+        rukovoditel_app_init();
+      });
+    </script>
+
+    <script>
+      var i18n = new Array();
+      i18n["TEXT_NO_RESULTS_MATCH"] = "No results match";
+      i18n["TEXT_ARE_YOU_SURE"] = "Are you sure?";
+      i18n["TEXT_SELECT_AN_OPTION"] = "Select an Option";
+      i18n["TEXT_SELECT_SOME_OPTIONS"] = "Select Some Options";
+      i18n["TEXT_FILE_TOO_LARGE"] = "File Too Large";
+      i18n["TEXT_MAXIMUM_UPLOAD_LIMIT"] =
+        "The upload limit for files has been exceeded. Maximum number of files: ";
+      i18n["TEXT_COMPLETED"] = "Completed";
+      i18n["TEXT_CANCELLED"] = "Cancelled";
+      i18n["TEXT_SCALE"] = "Scale";
+      i18n["TEXT_RESET_MAP_CONFIRM"] =
+        "Reset your current map and start a new one?";
+      i18n["TEXT_ON_TOP"] = "Top";
+      i18n["TEXT_ON_BOTTOM"] = "Bottom";
+      i18n["TEXT_ON_RIGHT"] = "Right";
+      i18n["TEXT_ON_LEFT"] = "Left";
+      i18n["TEXT_GRAPH"] = "Graph";
+      i18n["TEXT_TREE"] = "Tree";
+      i18n["TEXT_MAP"] = "Map";
+      i18n["TEXT_BOX"] = "Box";
+      i18n["TEXT_ELLIPSE"] = "Ellipse";
+      i18n["TEXT_UNDERLINE"] = "Underline";
+      i18n["TEXT_INSERT_CHILD"] = "Insert a child";
+      i18n["TEXT_INSERT_SIBLING"] = "Insert a sibling";
+      i18n["TEXT_DELETE"] = "Delete";
+      i18n["TEXT_EDIT"] = "Edit";
+      i18n["TEXT_SET_VALUE"] = "Set value";
+      i18n["TEXT_UNDO"] = "Undo";
+      i18n["TEXT_REDO"] = "Redo";
+      i18n["TEXT_CENTER_MAP"] = "Center map";
+      i18n["TEXT_DESCRIPTION"] = "Description";
+      i18n["TEXT_START"] = "Start";
+      i18n["TEXT_ERROR_FILE_EXTENSION"] = "This file type is not allowed.";
+      i18n["TEXT_APPLY"] = "Apply";
+      i18n["TEXT_CANCEL"] = "Cancel";
+      i18n["TEXT_TOGGLE_ON"] = "Toggle On";
+      i18n["TEXT_TOGGLE_OFF"] = "Toggle Off";
+      i18n["TEXT_SPEED"] = "Speed";
+      i18n["TEXT_SPEED_KPH"] = "kph";
+      i18n["TEXT_LAST_MESSAGE"] = "Last message";
+      i18n["TEXT_DATEPICKER_DAYS_HOURS_MINUTES_SHORT"] = '"d.","h.","m.","s."';
+      i18n["TEXT_AGO"] = "ago";
+      i18n["TEXT_CARS"] = "Cars";
+      i18n["TEXT_CLEAR"] = "Clear";
+
+      function url_for(module, params) {
+        return "https://tredgate.com/pmtool/index.php?module=to_rpelace&token=IFEyWMbUBU"
+          .replace("to_rpelace", module)
+          .concat("&", params);
+      }
+    </script>
+    <!-- END JAVASCRIPTS -->
+
+    <!-- Custom code before </body> tag -->
+
+    <a href="#" id="toTop" style="display: none"
+      ><span id="toTopHover"></span>To Top</a
+    >
+  </body>
+  <!-- END BODY -->
+</html>
